@@ -10,11 +10,11 @@ function knowHeaderButton($state) {
 
   return {
     restrict: 'E',
-    template: "<button ng-class='textDecoration' class='button button-clear button-dark'>{{text}}</button>",
+    template: "<button ng-class='classes' class='btn btn-link'>{{text}}</button>",
     scope: {
       text: '@',
       routeTo: '@',
-      textDecoration: '@',
+      classes: '@',
       currentState: '='
     },
     link(scope, elem, attrs) {

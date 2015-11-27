@@ -1,8 +1,8 @@
-<div class='bar bar-header'>
-  <know-header-button text-decoration='underlined' text='View' current-state='vmViewSets.stateName' route-to='viewSets'></know-header-button>
-  <div class='h1 title' ui-sref='home'>know</div>
-  <know-header-button text='Add' current-state='vmViewSets.stateName' route-to='createSet' class='header-button-right'></know-header-button>
-</div>
+<header class='row'>
+  <know-header-button classes='underlined left' text='View' current-state='vmViewSets.stateName' route-to='viewSets'></know-header-button>
+  <div class='h1 title text-center' ui-sref='home'>know</div>
+  <know-header-button classes='right' text='Add' current-state='vmViewSets.stateName' route-to='createSet'></know-header-button>
+</header>
 
 <ul class='list'>
   <li class='item no-padding' ng-repeat='(setTitle, data) in vmViewSets.sets'>
