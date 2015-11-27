@@ -1,0 +1,134 @@
+
+.title {
+  color: tomato !important;
+  font-size: 27px !important;
+}
+
+.no-resize {
+  resize: none;
+}
+
+.gray-color {
+  color: gray;
+}
+
+.red-color {
+  color: red;
+}
+
+.red-border {
+  border: 1px solid red;
+}
+
+.float-right {
+  float: right;
+}
+
+.font-thin {
+  font-weight: 200;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.margin-top-med {
+  margin-top: 2em;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.error-message {
+  height: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.button-font {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.header-button-right {
+  position: absolute;
+  right: 5px;
+}
+
+/* HOME.HTML */
+
+.home-buttons-container {
+  margin-top: 5em;
+
+  button {
+    padding: 0;
+    margin-bottom: 3em;
+  }
+}
+
+/* END OF HOME.HTML */
+
+#start-button {
+  font-size: 2.1em;
+  font-weight: 200;
+}
+
+.edit-button {
+  background-color: orange;
+  height: inherit;
+  padding-top: 35px;
+}
+
+#new-card {
+  margin-bottom: 20px;
+}
+
+.new-set-input {
+  margin-top: 2em;
+}
+
+.flip-next-container {
+  bottom: 10px;
+  position: absolute;
+  margin-left: 0;
+  padding-left: 0;
+  left: 0;
+
+  button {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+.view-card {
+  width: 94%;
+  box-shadow: 0 0 2px 1px lightgray;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 3%;
+  position: absolute;
+  top: 0;
+  bottom: 70px;
+  padding: 10px 20px 0px 20px;
+  overflow-y: scroll;
+}
+
+.view-card-content {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}

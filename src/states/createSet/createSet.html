@@ -1,0 +1,27 @@
+<div class='bar bar-header'>
+  <know-header-button text='View' current-state='vmCreateSet.stateName' route-to='viewSets'></know-header-button>
+  <div class='h1 title' ui-sref='home'>know</div>
+  <know-header-button text-decoration='underlined' text='Add' current-state='vmCreateSet.stateName' route-to='createSet' class='header-button-right'></know-header-button>
+</div>
+
+<h2 class='text-center font-thin margin-top-med'>
+  Create Flashcard Set
+</h2>
+
+<form name='newSet' ng-submit='vmCreateSet.createSet(vmCreateSet.set)' class='text-center col col-80 col-offset-10' novalidate>
+  <div class='new-set-input'>
+    <input type='text' name='title' class='text-center col col-100' placeholder='Flashcard Set Title' ng-model='vmCreateSet.set.title' ng-change='vmCreateSet.validateTitle(vmCreateSet.set.title)' autocomplete='off' required>
+    <div class='error-message'>
+      <p ng-show='vmCreateSet.badTitle' class='red-color'>
+        Title already exists!
+      </p>
+    </div>
+  </div>
+  <div class='new-set-input'>
+    <input type='text' name='tags' class='text-center col col-100' placeholder='Tags, i.e.: Sports, Baseball, History' ng-model='vmCreateSet.set.tags' ng-minlength='3' autocomplete='off' required>
+  </div>
+  <button type='submit' id='start-button' class='button button-clear button-balanced button-large margin-top-med' ng-disabled='newSet.$invalid || vmCreateSet.badTitle'>
+    Start
+  </button>
+</div>
+</form>

@@ -1,0 +1,22 @@
+<div class='bar bar-header'>
+  <button class='button button-clear button-dark' ng-click='vmEditSet.save(vmEditSet.set)'>Save</button>
+  <div class='h1 title'>{{vmEditSet.setTitle}}</div>
+  <button class='button button-clear button-dark' ng-click='vmEditSet.deleteSet(vmEditSet.setTitle)'>Delete</button>
+</div>
+
+<div class='card' ng-repeat='card in vmEditSet.set.cards'>
+  <div class='item item-text-wrap'>
+    <i class='icon ion-close float-right' ng-click='vmEditSet.deleteCard($index)'></i>
+    <textarea class='text-center full-width no-resize' rows='3' placeholder='Question' ng-model='card.question'></textarea>
+    <br>
+    <textarea class='text-center full-width no-resize' rows='3' placeholder='Answer' ng-model='card.answer'></textarea>
+  </div>
+</div>
+
+<footer class='row'>
+  <div class='col col-100 text-center'>
+    <button id='new-card' class='button button-clear button-positive text-center' ng-click='vmEditSet.makeNewCard()'>
+      New Card
+    </button>
+  </div>
+</footer>

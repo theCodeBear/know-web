@@ -10,7 +10,4 @@ function HomeCtrl() {
 
   let vmHome = this;
 
-  vmHome.header ='Home';
-
-
 }
