@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     copy = require('gulp-copy'),
     del = require('del'),
-    inject = require('gulp-inject');
+    inject = require('gulp-inject')
+    ghPages = require('gulp-gh-pages');
 
 var paths = {
   sass: ['./src/scss/**/*.scss'],
@@ -88,4 +89,9 @@ gulp.task('watch', ['inject'], function() {
   gulp.watch(paths.js, ['jshint']);
   gulp.watch(paths.html, ['copyHtmlImg']);
   gulp.watch(paths.all, ['inject']);
+});
+
+gulp.task('ghPages-deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
 });
