@@ -1,26 +1,26 @@
-<header class='row'>
+<header class='container-fluid'>
   <know-header-button classes='left' text='View' current-state='vmCreateSet.stateName' route-to='viewSets'></know-header-button>
   <div class='h1 title text-center' ui-sref='home'>know</div>
   <know-header-button classes='underlined right' text='Add' current-state='vmCreateSet.stateName' route-to='createSet'></know-header-button>
 </header>
 
-<h2 class='text-center font-thin margin-top-med'>
+<div class='text-center font-thin margin-top-sm content-title'>
   Create Flashcard Set
-</h2>
+</div>
 
-<form name='newSet' ng-submit='vmCreateSet.createSet(vmCreateSet.set)' class='text-center col col-80 col-offset-10' novalidate>
+<form name='newSet' ng-submit='vmCreateSet.createSet(vmCreateSet.set)' class='text-center col col-xs-10 col-xs-offset-1' novalidate>
   <div class='new-set-input'>
-    <input type='text' name='title' class='text-center col col-100' placeholder='Flashcard Set Title' ng-model='vmCreateSet.set.title' ng-change='vmCreateSet.validateTitle(vmCreateSet.set.title)' autocomplete='off' required>
+    <input type='text' name='title' class='text-center col col-xs-12' placeholder='Flashcard Set Title' ng-model='vmCreateSet.set.title' ng-change='vmCreateSet.validateTitle(vmCreateSet.set.title)' autocomplete='off' required>
     <div class='error-message'>
       <p ng-show='vmCreateSet.badTitle' class='red-color'>
         Title already exists!
       </p>
     </div>
   </div>
-  <div class='new-set-input'>
-    <input type='text' name='tags' class='text-center col col-100' placeholder='Tags, i.e.: Sports, Baseball, History' ng-model='vmCreateSet.set.tags' ng-minlength='3' autocomplete='off' required>
+  <div class='new-set-input text-center'>
+    <input type='text' name='tags' class='text-center col col-xs-12' placeholder='Tags i.e. Sports, Baseball, History' ng-model='vmCreateSet.set.tags' ng-minlength='3' autocomplete='off' required>
   </div>
-  <button type='submit' id='start-button' class='button button-clear button-balanced button-large margin-top-med' ng-disabled='newSet.$invalid || vmCreateSet.badTitle'>
+  <button type='submit' id='start-button' class='btn btn-link margin-top-med' ng-disabled='newSet.$invalid || vmCreateSet.badTitle'>
     Start
   </button>
 </div>

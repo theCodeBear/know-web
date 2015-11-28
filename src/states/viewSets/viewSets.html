@@ -1,23 +1,21 @@
-<header class='row'>
+<header class='container-fluid'>
   <know-header-button classes='underlined left' text='View' current-state='vmViewSets.stateName' route-to='viewSets'></know-header-button>
   <div class='h1 title text-center' ui-sref='home'>know</div>
   <know-header-button classes='right' text='Add' current-state='vmViewSets.stateName' route-to='createSet'></know-header-button>
 </header>
 
-<ul class='list'>
-  <li class='item no-padding' ng-repeat='(setTitle, data) in vmViewSets.sets'>
-    <div class='row no-padding'>
-      <div class='col col-10 text-center edit-button' ui-sref='editSet({setTitle: setTitle})'>
-        <i class='icon ion-edit'></i>
+<ul>
+  <li ng-repeat='(setTitle, data) in vmViewSets.sets'>
+    <div style='height: 3em;' class='inline-block edit-button col col-xs-1' style='font-size: 40px;' ui-sref='editSet({setTitle: setTitle})'>
+      <i class='fa fa-pencil'></i>
+    </div>
+    <div class='inline col col-xs-11' ui-sref='viewCards({setTitle: setTitle})'>
+      <div style='height: 1.5em;'>
+        <div class='inline list-set-title'>{{setTitle}}</div>
+        <div class='inline float-right'>{{data.cards.length}}</div>
       </div>
-      <div class='col col-90' ng-click='vmViewSets.goToCards(setTitle)'>
-        <div class='row'>
-          <div class='h2 inline col col-90'>{{setTitle}}</div>
-          <div class='h2 no-margin-top inline col col-10'>{{data.cards.length}}</div>
-        </div>
-        <div class='row'>
-          <span ng-repeat='tag in data.tags'>-{{tag}}-</span>
-        </div>
+      <div style='height: 1.5em;'>
+        <div class='inline tags' ng-repeat='tag in data.tags'>-{{tag}}-</div>
       </div>
     </div>
   </li>
