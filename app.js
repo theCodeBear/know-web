@@ -26,7 +26,7 @@ function config($stateProvider, $urlRouterProvider) {
     controller: 'ViewSetsCtrl as vmViewSets'
   }).state('editSet', {
     url: '/editSet/:setTitle',
-    templateUrl: 'states/editSet/editset.html',
+    templateUrl: 'states/editSet/editSet.html',
     controller: 'EditSetCtrl as vmEditSet'
   }).state('viewCards', {
     url: '/cards/:setTitle',

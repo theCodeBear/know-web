@@ -9,7 +9,7 @@
     <div style='height: 3em;' class='inline-block edit-button col col-xs-1' style='font-size: 40px;' ui-sref='editSet({setTitle: setTitle})'>
       <i class='fa fa-pencil'></i>
     </div>
-    <div class='inline col col-xs-11' ui-sref='viewCards({setTitle: setTitle})'>
+    <div class='inline col col-xs-11' ng-click='vmViewSets.goToCards(setTitle)'>
       <div style='height: 1.5em;'>
         <div class='inline list-set-title'>{{setTitle}}</div>
         <div class='inline float-right'>{{data.cards.length}}</div>
